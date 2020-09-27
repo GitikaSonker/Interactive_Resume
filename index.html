@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Resume</title>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".full_info_wrap .tabs ul li").click(function () {
+				$(".full_info_wrap .tabs ul li").removeClass("active");
+				$(this).addClass("active");
+
+				var datali = $(this).attr("data-li");
+
+				$(".full_info_item").hide();
+
+				if (datali == "experience") {
+					$(".experience").show();
+				}
+				else if (datali == "education") {
+					$(".education").show();
+				}
+				else if (datali == "contact") {
+					$(".contact").show();
+				}
+				else {
+					console.log("Loding...");
+				}
+			})
+		})
+	</script>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="resume">
+
+			<div class="profile_info">
+				<div class="profile_img">
+					<img src="profile_pic.png" alt="profile_img">
+				</div>
+				<div class="profile_data">
+					<p class="name">Gitika Sonker</p>
+					<span><i class="fas fa-map-marker-alt"></i> Varanasi, UP</span>
+				</div>
+
+			</div>
+
+			<div class="skills">
+				<div class="title">
+					Skills
+				</div>
+				<ul>
+					<li>
+						<div class="skill_item c">
+							<div class="icon"></div>
+							<div class="text">C</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item cplus">
+							<div class="icon"></div>
+							<div class="text">C++</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item matlab">
+							<div class="icon"></div>
+							<div class="text">Matlab</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item html">
+							<div class="icon"></div>
+							<div class="text">HTML</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item css">
+							<div class="icon"></div>
+							<div class="text">CSS</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item js">
+							<div class="icon"></div>
+							<div class="text">Javascript</div>
+						</div>
+					</li>
+
+
+
+				</ul>
+			</div>
+
+			<div class="full_info_wrap">
+				<div class="tabs">
+					<ul>
+						<li data-li="experience" class="active">Experience</li>
+						<li data-li="education">Education</li>
+						<li data-li="contact">Contact</li>
+					</ul>
+				</div>
+
+				<div class="full_info">
+					<div class="full_info_item experience">
+						<div class="title">WORK EXPERIENCE</div>
+
+						<div class="info_wrap">
+							<ul>
+								<li>
+									<div class="sub_title">
+										May 2019 - June 2019
+									</div>
+
+									<div class="info_item">
+										<div class="info_title">
+											Invent@IITGN
+										</div>
+										<div class="data">
+											Competitively selected to participate in an intensive 6-week program of
+											inventing-prototyping-patenting at IIT-Gandhinagar.<br>
+											Designed a device that monitors the hydration level of the human body
+											which was the subject of provisional
+											patent application 201911027096 (India)
+										</div>
+									</div>
+								</li>
+
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="full_info_item education" style="display: none;">
+						<div class="title">EDUCATION</div>
+
+						<div class="info_wrap">
+							<ul>
+								<li>
+									<div class="sub_title">
+										2017 - Present
+									</div>
+
+									<div class="info_item">
+										<div class="info_title">
+											Indian Institute of Technology, Guwahati
+										</div>
+										<div class="data">
+											B.Tech in Chemical Engineering
+										</div>
+										<div class="data">
+											CGPA: 6.85
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="sub_title">
+										2016 Pass Out
+									</div>
+
+									<div class="info_item">
+										<div class="info_title">
+											Sunbeam English School
+										</div>
+										<div class="data">
+											Senior Secondary 12<sup>th</sup> , CBSE
+										</div>
+										<div class="data">
+											Percentage: 89%
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="sub_title">
+										2014
+									</div>
+
+									<div class="info_item">
+										<div class="info_title">
+											Sunbeam English School
+										</div>
+										<div class="data">
+											Secondary 10<sup>th</sup>, CBSE
+										</div>
+										<div class="data">
+											CGPA: 8.0
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="full_info_item contact" style="display: none;">
+						<div class="title">CONTACT</div>
+
+						<div class="info_wrap">
+							<ul>
+								<li>
+									<span class="info_q">Email</span>
+									<span class="info_a">gitikasonker@gmail.com</span>
+								</li>
+								<li>
+									<span class="info_q">Webmail</span>
+									<span class="info_a">gitik170107018@iitg.ac.in</span>
+								</li>
+								<li>
+									<span class="info_q">Phone</span>
+									<span class="info_a">+91-7755095139</span>
+								</li>
+								<li>
+									<span class="info_q">Linkedin</span>
+									<span class="info_a">linkedin.com/in/gitika-sonker/</span>
+								</li>
+
+							</ul>
+							<br>
+							<div class="view_more_btn">
+								<a href="A4.pdf" target="_blank">Download<space>CV</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
+
+</html>
